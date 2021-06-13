@@ -1,26 +1,22 @@
 <?php
 
 /**
- * Short description for class
+ * Class to show differents challenges of Falabella.
  *
- * Long description for class (if any)...
- *
- * @copyright  2006 Zend Technologies
- * @license    http://www.zend.com/license/3_0.txt   PHP License 3.0
- * @version    Release: @package_version@
- * @link       http://dev.zend.com/package/PackageName
- * @sinc
  * */ 
 class Challenge {
 
     /**
-     * Does something interesting
+     * Method to stores a value in array according to the
+     * multiplicity of $numberOne and $numberTwo variables
+     * while advancing to a limit value.
      *
-     * @param integer $numberOne multiple number
-     * @param string  $messageOne message for multiple $numberOne
-     * @param integer $numberTwo multiple number
-     * @param string  $messageTwo message for multiple $numberTwo
-     * 
+     * @param integer $numberOne Multiple number
+     * @param string  $messageOne Message for the multiple $numberOne
+     * @param integer $numberTwo Multiple number
+     * @param string  $messageTwo Message for the multiple $numberTwo
+     * @param string  $messageForBoth Message for occasion when the number is a multiple of $numberOne and $numberTwo
+     * @param int     $limit 
      * 
      * @author Alejandro Gómez Anaya<a.gomezanaya@globant.com>
      * @return Array
@@ -39,10 +35,17 @@ class Challenge {
                     .str_repeat($messageOne, (int)($i % $numberOne == 0))
                     .str_repeat($messageTwo, (int)($i % $numberTwo == 0));
             }
-        
         return $numbersAndMessages;
     }
 
+    /**
+     * Method to print all values inside $numbersAndMessages array
+     * 
+     * @param array $numbersAndMessages array with numbers and strings values
+     * 
+     * @author Alejandro Gómez Anaya<a.gomezanaya@globant.com>
+     * @return void
+     */ 
     public function printNumbersAndMessages($numbersAndMessages) {
         for($i = 0; $i < count($numbersAndMessages); $i++) {
             echo $numbersAndMessages[$i]."<br/>";

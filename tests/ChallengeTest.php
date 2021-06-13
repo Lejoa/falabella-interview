@@ -3,7 +3,7 @@ use PHPUnit\Framework\TestCase;
 
 require('Challenge.php');
 
-class ChallengeTest extends TestCase
+final class ChallengeTest extends TestCase
 {
 
     public function testGetMessagesForMultipleNumbers() {
