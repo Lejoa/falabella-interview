@@ -21,9 +21,9 @@ class Challenge {
      * @author Alejandro Gómez Anaya<a.gomezanaya@globant.com>
      * @return Array
      */ 
-    public function getMessagesForMultipleNumbers($numberOne, $messageOne,
-        $numberTwo, $messageTwo, $messageForBoth, $limit) {
-        
+    public function getMessagesForMultipleNumbers($numberOne = 3, $messageOne = "Falabella",
+        $numberTwo = 5, $messageTwo = "IT", $messageForBoth = "Integraciones", $limit = 100) {
+
         $numbersAndMessages = array();
 
             for($i = 1; $i <= $limit; $i++) {
